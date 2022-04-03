@@ -1,3 +1,5 @@
+#!/bin/bash
+
 user=your_daily_user_here
 
 echo "kernel.kptr_restrict=2"                                >> /etc/sysctl.conf
