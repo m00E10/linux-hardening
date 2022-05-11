@@ -12,7 +12,7 @@ echo "-A INPUT -p tcp --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW
 echo "-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable"                     >> /etc/iptables/iptables.rules
 echo "-A INPUT -p tcp -j REJECT --reject-with tcp-reset"                                 >> /etc/iptables/iptables.rules
 echo "-A INPUT -j REJECT --reject-with icmp-proto-unreachable"                           >> /etc/iptables/iptables.rules
-echo "COMMIT"                                                                            >> /etc/iptables.rules
+echo "COMMIT"                                                                            >> /etc/iptables/iptables.rules
 
 iptables-restore /etc/iptables/iptables.rules
 iptables -nvL
